@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Gaticos</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Enamórate de los gaticos</h1>
+
+    <span id="error"></span>
+    <section id="randomCats">
+      <h2>Gaticos al azar</h2>
+      <article>
+        <img id="img" alt="foto de un gatico">
+        <button class="btn" id="btn1">
+          Guardar gatico en favoritos
+        </button>
+      </article>
+      <article>
+        <img id="img2" alt="foto de un gatico">
+        <button class="btn" id="btn2" >
+          Guardar gatico en favoritos
+        </button>
+      </article>
+
+      <button onclick="loadRandomCats()" class="btn">Recargar gaticos</button>
+    </section>
+    <section id="uploadingCats">
+      <h2>Sube la foto de tu gatico</h2>
+
+      <form id="uploadingForm">
+        <input id="file" type="file" name="file">
+        <button  class="btn" type="button" onclick="uploadCatPhoto()">Sube tu foto</button>
+      </form>
+    </section>
+    
+    <section id="favoriteCats">
+      <h2>Favoritos</h2>
+      <article>
+        <img id="img2" alt="foto de un gatico">
+        <button onclick="loadRandomCats()" class="btn">Guardar gatico en favoritos</button>
+      </article>    
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
